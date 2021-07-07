@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:color="@android:color/black"
+    android:color="@android:color/white"
     tools:ignore="NewApi">
     <item>
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
-            <corners
-                android:bottomLeftRadius="4dp"
-                android:bottomRightRadius="4dp" />
-            <solid android:color="@color/white" />
+            <solid android:color="@color/cod_grey" />
+            <corners android:radius="1000dp" />
         </shape>
     </item>
 </ripple>
-

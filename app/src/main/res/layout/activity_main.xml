@@ -13,6 +13,96 @@
         android:elevation="4dp"
         android:orientation="horizontal">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/piano_top_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:orientation="vertical"
+                android:background="@android:color/holo_red_dark"
+                android:layout_alignParentBottom="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/fast_rewind_LL"
+                style="@style/ControllerImageLayout"
+                android:layout_marginLeft="24dp">
+
+                <ImageView
+                    style="@style/ControllerImage"
+                    android:src="@drawable/fast_rewind" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skip_previous_ll"
+                style="@style/ControllerImageLayout"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/fast_rewind_LL">
+
+                <ImageView
+                    style="@style/ControllerImage"
+                    android:src="@drawable/skip_previous" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:text="Simple Piano"
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bree_serif"
+                    android:text="By Monik"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/skip_next_ll"
+                style="@style/ControllerImageLayout"
+                android:layout_marginRight="24dp"
+                android:layout_toLeftOf="@id/fast_forward_LL">
+
+                <ImageView
+                    style="@style/ControllerImage"
+                    android:src="@drawable/skip_next" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fast_forward_LL"
+                style="@style/ControllerImageLayout"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24dp">
+
+                <ImageView
+                    style="@style/ControllerImage"
+                    android:src="@drawable/fast_forward" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -23,9 +113,9 @@
         android:orientation="horizontal">
 
         <HorizontalScrollView
+            android:id="@+id/horizontal_scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -37,7 +127,7 @@
                 <!-- C3 TO B3 Start here-->
 
                 <LinearLayout
-                    android:id="@+id/p1"
+                    android:id="@+id/c3"
                     style="@style/WhiteKeyStyle"
                     android:gravity="bottom|center_horizontal">
 
@@ -49,9 +139,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p2"
+                    android:id="@+id/d3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p1"
+                    android:layout_toRightOf="@id/c3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -62,9 +152,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p3"
+                    android:id="@+id/e3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p2"
+                    android:layout_toRightOf="@id/d3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -75,9 +165,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p4"
+                    android:id="@+id/f3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p3"
+                    android:layout_toRightOf="@id/e3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -88,9 +178,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p5"
+                    android:id="@+id/g3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p4"
+                    android:layout_toRightOf="@id/f3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -101,9 +191,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p6"
+                    android:id="@+id/a3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p5"
+                    android:layout_toRightOf="@id/g3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -114,9 +204,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p7"
+                    android:id="@+id/b3"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p6"
+                    android:layout_toRightOf="@id/a3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -131,9 +221,9 @@
                 <!-- C4 TO B4 Start here-->
 
                 <LinearLayout
-                    android:id="@+id/p8"
+                    android:id="@+id/c4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p7"
+                    android:layout_toRightOf="@id/b3"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -144,9 +234,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p9"
+                    android:id="@+id/d4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p8"
+                    android:layout_toRightOf="@id/c4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -157,9 +247,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p10"
+                    android:id="@+id/e4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p9"
+                    android:layout_toRightOf="@id/d4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -170,9 +260,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p11"
+                    android:id="@+id/f4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p10"
+                    android:layout_toRightOf="@id/e4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -183,9 +273,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p12"
+                    android:id="@+id/g4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p11"
+                    android:layout_toRightOf="@id/f4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -196,9 +286,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p13"
+                    android:id="@+id/a4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p12"
+                    android:layout_toRightOf="@id/g4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -209,9 +299,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p14"
+                    android:id="@+id/b4"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p13"
+                    android:layout_toRightOf="@id/a4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -226,9 +316,9 @@
                 <!-- C5 TO B5 Start here-->
 
                 <LinearLayout
-                    android:id="@+id/p15"
+                    android:id="@+id/c5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p14"
+                    android:layout_toRightOf="@id/b4"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -239,9 +329,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p16"
+                    android:id="@+id/d5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p15"
+                    android:layout_toRightOf="@id/c5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -252,9 +342,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p17"
+                    android:id="@+id/e5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p16"
+                    android:layout_toRightOf="@id/d5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -265,9 +355,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p18"
+                    android:id="@+id/f5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p17"
+                    android:layout_toRightOf="@id/e5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -278,9 +368,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p19"
+                    android:id="@+id/g5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p18"
+                    android:layout_toRightOf="@id/f5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -291,9 +381,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p20"
+                    android:id="@+id/a5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p19"
+                    android:layout_toRightOf="@id/g5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -304,9 +394,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p21"
+                    android:id="@+id/b5"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p20"
+                    android:layout_toRightOf="@id/a5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -321,9 +411,9 @@
                 <!-- C6 TO B6 Start here-->
 
                 <LinearLayout
-                    android:id="@+id/p22"
+                    android:id="@+id/c6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p21"
+                    android:layout_toRightOf="@id/b5"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -334,9 +424,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p23"
+                    android:id="@+id/d6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p22"
+                    android:layout_toRightOf="@id/c6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -347,9 +437,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p24"
+                    android:id="@+id/e6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p23"
+                    android:layout_toRightOf="@id/d6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -360,9 +450,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p25"
+                    android:id="@+id/f6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p24"
+                    android:layout_toRightOf="@id/e6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -373,9 +463,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p26"
+                    android:id="@+id/g6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p25"
+                    android:layout_toRightOf="@id/f6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -386,9 +476,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p27"
+                    android:id="@+id/a6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p26"
+                    android:layout_toRightOf="@id/g6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -399,9 +489,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p28"
+                    android:id="@+id/b6"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p27"
+                    android:layout_toRightOf="@id/a6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -416,9 +506,9 @@
                 <!-- C7 TO B7 Start here-->
 
                 <LinearLayout
-                    android:id="@+id/p29"
+                    android:id="@+id/c7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p28"
+                    android:layout_toRightOf="@id/b6"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -429,9 +519,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p30"
+                    android:id="@+id/d7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p29"
+                    android:layout_toRightOf="@id/c7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -442,9 +532,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p31"
+                    android:id="@+id/e7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p30"
+                    android:layout_toRightOf="@id/d7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -455,9 +545,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p32"
+                    android:id="@+id/f7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p31"
+                    android:layout_toRightOf="@id/e7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -468,9 +558,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p33"
+                    android:id="@+id/g7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p32"
+                    android:layout_toRightOf="@id/f7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -481,9 +571,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p34"
+                    android:id="@+id/a7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p33"
+                    android:layout_toRightOf="@id/g7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -494,9 +584,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/p35"
+                    android:id="@+id/b7"
                     style="@style/WhiteKeyStyle"
-                    android:layout_toRightOf="@id/p34"
+                    android:layout_toRightOf="@id/a7"
                     android:gravity="bottom|center_horizontal">
 
                     <TextView
@@ -513,129 +603,129 @@
                 <!-- extra keys stars here-->
 
                 <LinearLayout
-                    android:id="@+id/b1"
+                    android:id="@+id/c3_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p1" />
+                    android:layout_toRightOf="@id/c3" />
 
                 <LinearLayout
-                    android:id="@+id/b2"
+                    android:id="@+id/d3_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p2" />
+                    android:layout_toRightOf="@id/d3" />
 
                 <LinearLayout
-                    android:id="@+id/b3"
+                    android:id="@+id/f3_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p4" />
+                    android:layout_toRightOf="@id/f3" />
 
                 <LinearLayout
-                    android:id="@+id/b4"
+                    android:id="@+id/g3_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p5" />
+                    android:layout_toRightOf="@id/g3" />
 
                 <LinearLayout
-                    android:id="@+id/b5"
+                    android:id="@+id/a3_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p6" />
+                    android:layout_toRightOf="@id/a3" />
 
                 <LinearLayout
-                    android:id="@+id/b6"
+                    android:id="@+id/c4_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p8" />
+                    android:layout_toRightOf="@id/c4" />
 
                 <LinearLayout
-                    android:id="@+id/b7"
+                    android:id="@+id/d4_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p9" />
+                    android:layout_toRightOf="@id/d4" />
 
                 <LinearLayout
-                    android:id="@+id/b8"
+                    android:id="@+id/f4_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p11" />
+                    android:layout_toRightOf="@id/f4" />
 
                 <LinearLayout
-                    android:id="@+id/b9"
+                    android:id="@+id/g4_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p12" />
+                    android:layout_toRightOf="@id/g4" />
 
                 <LinearLayout
-                    android:id="@+id/b10"
+                    android:id="@+id/a4_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p13" />
+                    android:layout_toRightOf="@id/a4" />
 
                 <LinearLayout
-                    android:id="@+id/b11"
+                    android:id="@+id/c5_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p15" />
+                    android:layout_toRightOf="@id/c5" />
 
                 <LinearLayout
-                    android:id="@+id/b12"
+                    android:id="@+id/d5_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p16" />
+                    android:layout_toRightOf="@id/d5" />
 
                 <LinearLayout
-                    android:id="@+id/b13"
+                    android:id="@+id/f5_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p18" />
+                    android:layout_toRightOf="@id/f5" />
 
                 <LinearLayout
-                    android:id="@+id/b14"
+                    android:id="@+id/g5_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p19" />
+                    android:layout_toRightOf="@id/g5" />
 
                 <LinearLayout
-                    android:id="@+id/b15"
+                    android:id="@+id/a5_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p20" />
+                    android:layout_toRightOf="@id/a5" />
 
                 <LinearLayout
-                    android:id="@+id/b16"
+                    android:id="@+id/c6_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p22" />
+                    android:layout_toRightOf="@id/c6" />
 
                 <LinearLayout
-                    android:id="@+id/b17"
+                    android:id="@+id/d6_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p23" />
+                    android:layout_toRightOf="@id/d6" />
 
                 <LinearLayout
-                    android:id="@+id/b18"
+                    android:id="@+id/f6_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p25" />
+                    android:layout_toRightOf="@id/f6" />
 
                 <LinearLayout
-                    android:id="@+id/b19"
+                    android:id="@+id/g6_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p26" />
+                    android:layout_toRightOf="@id/g6" />
 
                 <LinearLayout
-                    android:id="@+id/b20"
+                    android:id="@+id/a6_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p27" />
+                    android:layout_toRightOf="@id/a6" />
 
                 <LinearLayout
-                    android:id="@+id/b21"
+                    android:id="@+id/c7_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p29" />
+                    android:layout_toRightOf="@id/c7" />
 
                 <LinearLayout
-                    android:id="@+id/b22"
+                    android:id="@+id/d7_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p30" />
+                    android:layout_toRightOf="@id/d7" />
 
                 <LinearLayout
-                    android:id="@+id/b23"
+                    android:id="@+id/f7_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p32" />
+                    android:layout_toRightOf="@id/f7" />
 
                 <LinearLayout
-                    android:id="@+id/b24"
+                    android:id="@+id/g7_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p33" />
+                    android:layout_toRightOf="@id/g7" />
 
                 <LinearLayout
-                    android:id="@+id/b25"
+                    android:id="@+id/a7_black"
                     style="@style/BlackKeyStyle"
-                    android:layout_toRightOf="@id/p34" />
+                    android:layout_toRightOf="@id/a7" />
 
                 <!-- extra keys ends here-->
 
