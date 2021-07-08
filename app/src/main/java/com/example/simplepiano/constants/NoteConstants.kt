@@ -1,4 +1,4 @@
-package com.example.simplepiano.constants
+package com.builders.simplepiano.constants
 
 class NoteConstants {
     companion object {

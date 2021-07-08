@@ -1,10 +1,10 @@
-package com.example.simplepiano.utils
+package com.builders.simplepiano.utils
 
 import android.media.AudioAttributes
 import android.media.SoundPool
-import com.example.simplepiano.R
-import com.example.simplepiano.constants.AppController
-import com.example.simplepiano.constants.NoteConstants
+import com.builders.simplepiano.R
+import com.builders.simplepiano.constants.AppController
+import com.builders.simplepiano.constants.NoteConstants
 
 
 class SoundPoolUtils {

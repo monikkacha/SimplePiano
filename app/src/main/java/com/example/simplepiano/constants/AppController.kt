@@ -1,8 +1,8 @@
-package com.example.simplepiano.constants
+package com.builders.simplepiano.constants
 
 import android.app.Application
 import android.content.Context
-import com.example.simplepiano.utils.SoundPoolUtils
+import com.builders.simplepiano.utils.SoundPoolUtils
 
 class AppController : Application() {
 

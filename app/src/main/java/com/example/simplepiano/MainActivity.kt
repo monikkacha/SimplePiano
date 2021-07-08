@@ -1,12 +1,12 @@
-package com.example.simplepiano
+package com.builders.simplepiano
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.example.simplepiano.constants.NoteConstants
-import com.example.simplepiano.utils.SoundPoolUtils
+import com.builders.simplepiano.constants.NoteConstants
+import com.builders.simplepiano.utils.SoundPoolUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 
